@@ -1,0 +1,10 @@
+extends ../layout.jade
+include ../mixins/newsMixins.jade
+
+
+block content
+    article
+        header
+            h2 Последние новости
+    +newsContentMixin()
+    

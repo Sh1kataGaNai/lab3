@@ -1,0 +1,15 @@
+mixin newsMixin(image, alt, desc, link, time)
+    header
+        .selfimg
+            img(src=image, width='250', alt=alt)
+            p 
+                p=time
+    p=desc
+        
+    p
+        a(href=link) Подробнее...
+
+mixin newsContentMixin()
+    - for (var i = 1; i < Object.keys(news['data_news']).length + 1; i++){
+        +newsMixin(news['data_news'][i.toString()]['image'], news['data_news'][i.toString()]['alt'], news['data_news'][i.toString()]['description'], news['data_news'][i.toString()]['link'], news['data_news'][i.toString()]['time'])
+    - }

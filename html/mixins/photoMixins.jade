@@ -1,0 +1,11 @@
+mixin photoMixin(src, alt, desc)
+    article
+        figure.photo
+            a(href=src)
+                img.photoimg(src=src, alt=alt)
+            figcaption=desc
+
+mixin photoContentMixin()
+    - for (var i = 1; i < Object.keys(gallery['data_gallery']).length + 1; i++){
+        +photoMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'], gallery['data_gallery'][i.toString()]['description'])
+    - }

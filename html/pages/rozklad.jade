@@ -1,0 +1,18 @@
+extends ../layout.jade
+include ../mixins/sheduleMixins.jade
+
+block content
+    header
+        article
+            h2 Мое расписание
+    article
+        table.rozklad
+            thead
+                tr.rozklad-header-row
+                    th Вторник
+                    th Среда
+                    th Четверг
+                    th Пятница
+                    th Суббота
+                tbody
+                    +sheduleContentMixin()
