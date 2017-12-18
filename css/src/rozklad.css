@@ -8,9 +8,15 @@
 }
 
 .rozklad-header-row {
-	background-color: gray;
+	background-color: #006363;
+}
+.rozklad-row-p{
+	margin: 10px;
+}
+.rozklad-row:nth-child(even) {
+	background-color: #33CCCC;
 }
 
-.rozklad-row:nth-child(even) {
-	background-color: lightgray;
+.rozkladSection {
+	padding: 10px;
 }

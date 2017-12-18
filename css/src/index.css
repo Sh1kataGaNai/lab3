@@ -1,6 +1,48 @@
-.selfimg p{
- text-align: center;
+
+.mainPage {
+	display: flex;
+	flex-direction: column;
 }
-.selfimg{
- max-width: 250px;
+
+.mainPageSectionContainer {
+	flex: 1;
+	padding: 10px;
 }
+
+.mainPageAboutSection {
+	border-bottom: 1px dotted #006363;
+}
+
+.sectionHeadline {
+	font-size: 24px;
+	color: #006363;
+	margin-bottom: 5px;
+}
+
+.mainPageSection {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+}
+
+.photo {
+	width: 250px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+}
+.textAbout{
+	text-align: center;
+}
+
+.interestsHeadline {
+	margin-top: 20px;
+}
+
+.interestItem {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+

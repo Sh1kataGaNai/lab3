@@ -1,27 +1,42 @@
 doctype html
 html
-  head
-    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-    link(rel='stylesheet', type='text/css', href='css/dist/main.min.css')
-    block title
-        title LabsGEV
-  body
-    header
-      h1 Личная страница (блог) Гречко Евгений Владимирович
-      nav
-        ul
-          li
-            a(href='index.html') Главная
-          li
-            a(href='rozklad.html') Мое расписание
-          li
-            a(href='photo.html') Фотоальбом
-          li
-            a(href='news.html') Последние новости
-            
-    section
-        block content
-    footer
-      p
-        | Copyright 2017. All rights reserved. 
-        a(href='mailto:example@example.com') Mail me
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        link(rel='stylesheet', type='text/css', href='css/dist/main.min.css')
+        block head
+            title LabsGev
+            -var selected = 'home'
+        -var menu = { 'Главная': 'index.html', 'Мое расписание': 'rozklad.html', 'Фотоальбом': 'photo.html', 'Последние новости': 'news.html' }
+    body
+        div.content
+          header
+              div.headerTitleSection
+                div.titleContainer
+                  h1.headlineTitle Личная страница(блог) Гречко Евгений Владимирович
+            nav
+              ul.navContainer
+                each val, key in menu
+                  if selected === key
+                    if key === 'Последние новости'
+                      li.navElement.navSelected
+                        a(href=val).navText=key
+                        div.navElementRect
+                    else
+                      li.navElement.navElementMargin.navSelected
+                        a(href=val).navText=key
+                        div.navElementRect
+                  else 
+                    if key === 'Последние новости'
+                      li.navElement
+                        a(href=val).navText=key
+                        div.navElementRect
+                    else
+                      li.navElement.navElementMargin
+                        a(href=val).navText=key
+                        div.navElementRect
+          section.contentSection
+              block content
+          footer.footer
+            span.footerText
+              | Copyright 2017. All rights reserved. 
+              a(href='mailto:example@example.com') Mail me

@@ -1,17 +1,19 @@
 mixin sheduleMixin(subject, teacher, count)   
     td
-        p=subject
-        p=teacher
+        p.rozklad-row-p=subject
+        p.rozklad-row-p=teacher
+
+    
 
     
 
 mixin sheduleContentMixin()
     - for (var lesson = 1; lesson < Object.keys(shedule['data_shedule']).length + 1; lesson++){
         tr.rozklad-row 
-    -   for (var day = 2; day <= 6; day++){
+            -   for (var day = 2; day <= 6; day++){
 
-                +sheduleMixin(shedule['data_shedule']['lesson_' + lesson.toString()][day]['subject'], shedule['data_shedule']['lesson_' + lesson.toString()][day]['teacher'])
-    -   }
+                    +sheduleMixin(shedule['data_shedule']['lesson_' + lesson.toString()][day]['subject'], shedule['data_shedule']['lesson_' + lesson.toString()][day]['teacher'])
+            -   }
 
     -   }
 

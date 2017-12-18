@@ -1,9 +1,11 @@
 mixin interestsMixin(image, alt, desc, link)
-    article
-        .selfimg
-            img(src=image, width='250', alt=alt)
-            p=alt
-        p=desc
+    article.interestItem
+        figure.photo
+            img.photo(src=image, alt=alt)
+            figcaption=alt
+        div
+            p=desc
+
 mixin interestsContentMixin()
     - for (var i = 1; i < Object.keys(interests['data_interests']).length + 1; i++){
         +interestsMixin(interests['data_interests'][i.toString()]['image'], interests['data_interests'][i.toString()]['alt'], interests['data_interests'][i.toString()]['description'])

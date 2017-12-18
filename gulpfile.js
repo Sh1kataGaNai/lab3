@@ -17,7 +17,7 @@ var data_module = require('./data_module');
 
 
 gulp.task('css',function(){
-    gulp.src(['css/src/**/*.css'])
+    gulp.src(['css/src/reset.css', 'css/src/**/*.css'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);

@@ -3,8 +3,9 @@ include ../mixins/newsMixins.jade
 
 
 block content
-    article
+    article.newsSection
         header
-            h2 Последние новости
-    +newsContentMixin()
+            h2.sectionHeadline Последние новости
+    div.newsListSection
+        +newsContentMixin()
     

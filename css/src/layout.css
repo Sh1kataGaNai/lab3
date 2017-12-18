@@ -1,0 +1,157 @@
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #E7E7E7;
+}
+
+.content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 960px;
+	margin: auto;
+	box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.headerTitleSection {
+	padding: 30px;
+	background-color: #5CCCCC;
+	box-shadow: 0 0 15px rgba(0,0,0,0.5); 
+}
+
+.headerRectangles {
+	display: flex;
+}
+
+.headerRect {
+	height: 25px;
+}
+
+.firstHeaderRect {
+	background-color: #1D7373;
+}
+
+.secondHeaderRect {
+	background-color: #006363;
+}
+
+.thirdHeaderRect {
+	background-color: #009999;
+}
+
+.fourthHeaderRect {
+	background-color: #33CCCC;
+}
+
+.fifthHeaderRect {
+	background-color: #006363;
+}
+
+.smallerHeaderRect {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.biggerHeaderRect {
+	flex: 5;
+	background-color: #33CCCC;
+}
+
+.headerTitles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 45px;
+}
+
+.titleContainer {
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.headlineTitle {
+	font-size: 64px;
+	color: #111111;
+}
+
+.secondaryTitle {
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.navContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.navElement {
+	position: relative;
+	flex: 1;
+	text-align: center;
+	background-color: #009999;
+	color: #111111;
+}
+
+.navElement:hover {
+	background-color: #1D7373;
+	color: #FFFFFF;
+}
+
+.navSelected {
+	background-color: #1D7373;
+	color: #FFFFFF;
+}
+
+.navElementMargin {
+	margin-right: 1px;
+}
+
+.navText {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.navElementRect {
+	width: 7px;
+	height: 7px;
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	background-color: #009999;
+}
+
+.contentSection {
+	flex: 1;
+	background-color: #FFFFFF;
+}
+
+.footer {
+	background-color: #3CCCCC;
+	color: #111111;
+}
+.footer:hover {
+	background-color: #1D7373;
+	color: #FFFFFF;
+}
+
+.footerText {
+	display: block;
+	padding: 5px;
+	text-align: center;
+	color: inherit;
+}
+
+.footerText > a {
+	color: inherit;
+}

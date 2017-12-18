@@ -1,7 +1,15 @@
-.photo{
-    text-align: center;
-    }
-.photoimg{
-	width: 500px;
-	height: 300px;
+.photoSection {
+	padding: 10px;
+}
+
+.photoListSection {
+	margin-top: 10px;
+}
+
+.photoItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 350px;
+	margin-bottom: 20px;
 }

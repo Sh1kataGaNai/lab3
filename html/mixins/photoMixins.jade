@@ -1,8 +1,8 @@
 mixin photoMixin(src, alt, desc)
     article
-        figure.photo
+        figure.photoItem
             a(href=src)
-                img.photoimg(src=src, alt=alt)
+                img.photoItem(src=src, alt=alt)
             figcaption=desc
 
 mixin photoContentMixin()

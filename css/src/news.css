@@ -1,0 +1,24 @@
+.newsSection {
+    padding: 10px;
+}
+
+.newsListSection {
+    margin-top: 10px;
+}
+
+.newsItemBody {
+    margin: 10px;
+}
+
+.newsItemDetailLink {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.newsPhoto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 20px;
+}

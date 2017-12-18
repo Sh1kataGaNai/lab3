@@ -3,7 +3,9 @@ include ../mixins/photoMixins.jade
 
 
 block content
-    article
+    article.photoSection
         header
-            h2 Фотоальбом
-    +photoContentMixin()
+            h2.sectionHeadline Фотоальбом
+    article.photoSection
+        div.photoListSection
+           +photoContentMixin()
