@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var autoPrefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
 //if node version is lower than v.0.1.2
 require('es6-promise').polyfill();
 var cssComb = require('gulp-csscomb');
@@ -16,14 +17,15 @@ var data_module = require('./data_module');
 
 
 
-gulp.task('css',function(){
-    gulp.src(['css/src/reset.css', 'css/src/**/*.css'])
+gulp.task('scss',function(){
+    gulp.src(['css/src/app.scss'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);
                 this.emit('end');
             }
         }))
+        .pipe(sass())
         .pipe(autoPrefixer())
         .pipe(cssComb())
         .pipe(cmq({log:true}))
@@ -84,6 +86,6 @@ gulp.task('jade',function(){
 });
 gulp.task('default',function(){
     gulp.watch('js/src/**/*.js',['js']);
-    gulp.watch('css/src/**/*.css',['css']);
+    gulp.watch('css/src/**/*.scss',['scss']);
     gulp.watch('html/**/*.jade',['jade']);
 });
