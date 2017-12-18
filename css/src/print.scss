@@ -1,0 +1,13 @@
+@media print {
+    * {
+        font-family: 'Times New Roman', Georgia, Palatino, serif;
+    }
+
+    body {
+        margin: 50px;
+    }
+
+    .footer, .scrollTop, .navContainer {
+        display: none;
+    }
+}

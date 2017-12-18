@@ -1,0 +1,20 @@
+@media screen and (max-width: 960px) {
+    .content {
+        width: 90%;
+    }
+    .headlineTitle {
+        font-size: 32px;
+        color: #111111;
+    }
+    .navContainer {
+        flex-direction: column;
+    }
+
+    .navMenuContainer{
+    	flex-direction: column;
+    }
+    .socialNavContainer {
+        align-self: center;
+        flex-direction: row;
+    }
+}

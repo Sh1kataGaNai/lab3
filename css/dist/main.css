@@ -183,8 +183,10 @@ body {
 	height: 25px;
 }
 
+/* Main colors theme
+
 .firstHeaderRect {
-	background-color: #1d7373;
+	background-color: #1D7373;
 }
 
 .secondHeaderRect {
@@ -192,16 +194,17 @@ body {
 }
 
 .thirdHeaderRect {
-	background-color: #099;
+	background-color: #009999;
 }
 
 .fourthHeaderRect {
-	background-color: #3cc;
+	background-color: #33CCCC;
 }
 
 .fifthHeaderRect {
 	background-color: #006363;
 }
+*/
 
 .smallerHeaderRect {
 	margin-right: 10px;
@@ -523,5 +526,59 @@ th {
 
 .rozkladSection {
 	padding: 10px;
+}
+
+@media screen and (max-width: 960px) {
+
+.content {
+	width: 90%;
+}
+
+.headlineTitle {
+	font-size: 32px;
+	color: #111;
+}
+
+.navContainer {
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+}
+
+.navMenuContainer {
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+}
+
+.socialNavContainer {
+	flex-direction: row;
+	-ms-flex-item-align: center;
+	align-self: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+}
+
+}
+
+@media print {
+
+* {
+	font-family: 'Times New Roman', Georgia, Palatino, serif;
+}
+
+body {
+	margin: 50px;
+}
+
+.footer,
+.scrollTop,
+.navContainer {
+	display: none;
+}
+
 }
 
