@@ -1,6 +1,9 @@
 extends ../layout.jade
 include ../mixins/interestsMixins.jade
 
+block head
+  -var selected = 'Главная'
+  
 block content
     section.mainPage 
         article.mainPageSectionContainer.mainPageAboutSection

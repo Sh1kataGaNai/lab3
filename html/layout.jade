@@ -5,38 +5,39 @@ html
         link(rel='stylesheet', type='text/css', href='css/dist/main.min.css')
         block head
             title LabsGev
-            -var selected = 'home'
+            -var selected = 'main'
         -var menu = { 'Главная': 'index.html', 'Мое расписание': 'rozklad.html', 'Фотоальбом': 'photo.html', 'Последние новости': 'news.html' }
     body
         div.content
-          header
+            a(name="top")
+            header
               div.headerTitleSection
-                div.titleContainer
+                  div.titleContainer
                   h1.headlineTitle Личная страница(блог) Гречко Евгений Владимирович
-            nav
-              ul.navContainer
-                each val, key in menu
-                  if selected === key
-                    if key === 'Последние новости'
-                      li.navElement.navSelected
-                        a(href=val).navText=key
-                        div.navElementRect
-                    else
-                      li.navElement.navElementMargin.navSelected
-                        a(href=val).navText=key
-                        div.navElementRect
-                  else 
-                    if key === 'Последние новости'
-                      li.navElement
-                        a(href=val).navText=key
-                        div.navElementRect
-                    else
-                      li.navElement.navElementMargin
-                        a(href=val).navText=key
-                        div.navElementRect
-          section.contentSection
-              block content
-          footer.footer
-            span.footerText
-              | Copyright 2017. All rights reserved. 
-              a(href='mailto:example@example.com') Mail me
+            nav.navContainer
+                ul.navMenuContainer
+                    each val, key in menu
+                        li(class={ navElement: key !== selected, navBorder: key !== 'Последние новости' && key !== selected, navElementSelected: key === selected })
+                            if key === 'Главная'
+                                a(href=val, class={ navText: true })
+                                    img(src='./images/home-icon.png').navHome
+                            else
+                                a(href=val, class={ navText: true })=key
+                ul.socialNavContainer
+                    li
+                        a(href='https://facebook.com/').socialNavIcon
+                            img(src='./images/like.png')
+                    li
+                        a(href='https://twitter.com/').socialNavIcon
+                            img(src='./images/twitter.png')
+                    li
+                        a(href='https://google.com/').socialNavIcon
+                            img(src='./images/google-plus.png')
+
+            section.contentSection
+                block content
+            footer.footer
+                span.footerText
+                    | Copyright 2017. All rights reserved. 
+                    a(href='mailto:example@example.com') Mail me
+            a(href='#top').scrollTop Scroll To Top

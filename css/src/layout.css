@@ -85,50 +85,68 @@ html, body {
 }
 
 .navContainer {
+	height: 57px;
+	border-radius: 5px;
+	background-image: linear-gradient(0deg,  #B3B3B3 1%, #FFFFFF 100%);
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: row;
+	flex: 1;
 	margin-top: 3px;
-	margin-bottom: 3px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 10px 6px -6px #777;
+}
+.navMenuContainer {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	align-items: center;
+}
+.socialNavContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.socialNavIcon {
+	margin-right: 20px;
+	height: 37px;
+	line-height: 37px;
+	display: block;
+}
+.navHome {
+	margin: 10px 0;
 }
 
-.navElement {
-	position: relative;
-	flex: 1;
-	text-align: center;
-	background-color: #009999;
-	color: #111111;
+.navElementSelected {
+	height: 57px;
+	box-shadow: inset 0 0 5px #000000;
+	box-sizing: border-box;
+	border-bottom: 3px solid skyblue
 }
 
 .navElement:hover {
-	background-color: #1D7373;
-	color: #FFFFFF;
-}
-
-.navSelected {
-	background-color: #1D7373;
-	color: #FFFFFF;
-}
-
-.navElementMargin {
-	margin-right: 1px;
+	border-top: 3px solid #111;
 }
 
 .navText {
-	display: block;
-	color: inherit;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 16px;
+	color: #111;
 	text-decoration: none;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	height: 57px;
+	line-height: 57px;
+	display: block;
 }
 
-.navElementRect {
-	width: 7px;
-	height: 7px;
-	position: absolute;
-	top: 4px;
-	left: 6px;
-	background-color: #009999;
+.navBorder {
+	box-shadow: 1px 0 0px rgba(138,138,138,0.6);
+}
+.scrollTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
 }
 
 .contentSection {

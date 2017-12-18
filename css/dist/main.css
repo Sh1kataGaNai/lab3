@@ -325,55 +325,96 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
+	height: 57px;
 	margin-top: 3px;
-	margin-bottom: 3px;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.navElement {
-	position: relative;
-	text-align: center;
-	color: #111;
-	background-color: #099;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-image: -webkit-gradient(linear,  left bottom, left top,  color-stop(1%, #b3b3b3), to(#fff));
+	background-image: linear-gradient(0deg,  #b3b3b3 1%, #fff 100%);
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 10px 6px -6px #777;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 }
 
+.navMenuContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.socialNavContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.socialNavIcon {
+	line-height: 37px;
+	display: block;
+	height: 37px;
+	margin-right: 20px;
+}
+
+.navHome {
+	margin: 10px 0;
+}
+
+.navElementSelected {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 57px;
+	border-bottom: 3px solid skyblue;
+	-webkit-box-shadow: inset 0 0 5px #000;
+	box-shadow: inset 0 0 5px #000;
+}
+
 .navElement:hover {
-	color: #fff;
-	background-color: #1d7373;
-}
-
-.navSelected {
-	color: #fff;
-	background-color: #1d7373;
-}
-
-.navElementMargin {
-	margin-right: 1px;
+	border-top: 3px solid #111;
 }
 
 .navText {
+	font-size: 16px;
+	line-height: 57px;
 	display: block;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	height: 57px;
+	padding-right: 25px;
+	padding-left: 25px;
 	text-decoration: none;
-	color: inherit;
+	color: #111;
 }
 
-.navElementRect {
-	position: absolute;
-	top: 4px;
-	left: 6px;
-	width: 7px;
-	height: 7px;
-	background-color: #099;
+.navBorder {
+	-webkit-box-shadow: 1px 0 0 rgba(138,138,138,.6);
+	box-shadow: 1px 0 0 rgba(138,138,138,.6);
+}
+
+.scrollTop {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
 }
 
 .contentSection {
