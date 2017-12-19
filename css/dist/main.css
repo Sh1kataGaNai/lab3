@@ -501,6 +501,62 @@ body {
 	align-items: center;
 }
 
+.slidesjs-navigation {
+	font-weight: bold;
+	margin-right: 10px;
+	color: #099;
+}
+
+.slidesjs-pagination {
+	float: right;
+}
+
+.slidesjs-pagination-item {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.slidesjs-pagination-item a {
+	font-weight: bold;
+	color: #099;
+}
+
+.ui-tabs-tab {
+	display: inline-block;
+	margin-top: 10px;
+	border: 1px solid #099;
+}
+
+.ui-tabs-tab a {
+	display: inline-block;
+	text-decoration: none;
+	color: #099;
+}
+
+.ui-tabs-anchor {
+	display: block;
+	padding: 10px;
+}
+
+.ui-tabs-active {
+	font-weight: bold;
+	background: #3ccccc;
+}
+
+.ui-tabs-active a {
+	color: #fff;
+}
+
+#colorbox {
+	z-index: 9999;
+}
+
+.colorbox {
+	font-weight: bold;
+	display: block;
+	color: #3ccccc;
+}
+
 .rozklad {
 	border-collapse: collapse;
 	text-align: center;

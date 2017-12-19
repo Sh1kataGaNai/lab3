@@ -2,12 +2,43 @@ extends ../layout.jade
 include ../mixins/photoMixins.jade
 
 block head
-  -var selected = 'Фотоальбом'
+    -var selected = 'Фотоальбом'
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    script(src="js/dist/jquery.slides.min.js")
+    script(src="js/dist/jquery.colorbox-min.js")
+    script.
+        $(function(){
+            $("#slides").slidesjs({
+            width: 940,
+            height: 528
+            });
+        });
 
 block content
     article.photoSection
         header
             h2.sectionHeadline Фотоальбом
     article.photoSection
-        div.photoListSection
-           +photoContentMixin()
+        header
+            h2.sectionHeadline JQuery Слайдшоу
+        div.photoSection
+            div#slides
+                +photoContentSlidesMixin()
+        header
+            h2.sectionHeadline Tabs
+        div#tabs
+            ul
+                li
+                    a(href='#tab1') Section #1
+                li
+                    a(href='#tab2') Section #2
+        
+            div#tab1
+                +photoContentSlidesTabsMixin1()
+            div#tab2
+                +photoContentSlidesTabsMixin2()
+        script.
+            $("#tabs").tabs();
+            $("a.colorbox").colorbox();
+

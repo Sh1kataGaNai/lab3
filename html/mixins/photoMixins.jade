@@ -5,7 +5,28 @@ mixin photoMixin(src, alt, desc)
                 img.photoItem(src=src, alt=alt)
             figcaption=desc
 
+mixin photoSlidesMixin(src, alt, desc)
+    img(src=src, alt=alt, height=500)
+
+mixin photoSlidesTabsMixin(src, alt, desc)
+    a(href=src, alt=alt).colorbox=desc
+    br
+
+
 mixin photoContentMixin()
     - for (var i = 1; i < Object.keys(gallery['data_gallery']).length + 1; i++){
         +photoMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'], gallery['data_gallery'][i.toString()]['description'])
+    - }
+mixin photoContentSlidesMixin()
+    - for (var i = 1; i < Object.keys(gallery['data_gallery']).length + 1; i++){
+        +photoSlidesMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'], gallery['data_gallery'][i.toString()]['description'])
+    - }
+
+mixin photoContentSlidesTabsMixin1()
+    - for (var i = 1; i < ((Object.keys(gallery['data_gallery']).length + 1) / 2) | 0; i++){
+        +photoSlidesTabsMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'], gallery['data_gallery'][i.toString()]['description'])
+    - }
+mixin photoContentSlidesTabsMixin2()
+    - for (var i = (((Object.keys(gallery['data_gallery']).length + 1) / 2) | 0) + 1; i < Object.keys(gallery['data_gallery']).length + 1; i++){
+        +photoSlidesTabsMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'], gallery['data_gallery'][i.toString()]['description'])
     - }

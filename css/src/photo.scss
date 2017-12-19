@@ -13,3 +13,55 @@
 	width: 350px;
 	margin-bottom: 20px;
 }
+
+.slidesjs-navigation {
+	color: #009999;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.slidesjs-pagination {
+	float: right;
+}
+
+.slidesjs-pagination-item {
+	display: inline-block;
+	margin-left: 10px;
+	a {
+		color: #009999;
+		font-weight: bold;
+	}
+}
+
+.ui-tabs-tab {
+	margin-top: 10px;
+	border: 1px solid #009999;
+	display: inline-block;
+	a {
+		color: #009999;
+		text-decoration: none;
+		display: inline-block;
+	}
+}
+
+.ui-tabs-anchor {
+	display: block;
+	padding: 10px;
+}
+
+.ui-tabs-active {
+	background: #3CCCCC;
+	font-weight: bold;
+	a {
+		color: #fff;
+	}
+}
+#colorbox {
+	z-index: 9999;
+}
+
+.colorbox {
+	display: block;
+	color: #3CCCCC;
+	font-weight: bold;
+}
