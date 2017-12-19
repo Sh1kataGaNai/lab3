@@ -1,24 +1,27 @@
-function Slider(options) {
-  const { container, slider } = options;
-  const items = slider.childNodes;
+class Slider {
+  constructor(options) {
+    const { container, slider } = options;
+    const items = slider.childNodes;
 
-  const data = container.dataset;
+    const data = container.dataset;
 
-  const width = 150;
-  const count = options.elementsPerPage || data.elementsPerPage;
-  const transitionSpeed = options.transitionSpeed || data.transitionSpeed;
-  container.style.width = `${width * count}px`;
-  slider.style.transition = `margin-left ${transitionSpeed}ms`;
+    const width = 150;
+    const count = options.elementsPerPage || data.elementsPerPage;
+    const transitionSpeed = options.transitionSpeed || data.transitionSpeed;
 
-  let position = 0;
+    $(container).css('width', `${width * count}px`);
+    $(slider).css('transition', `margin-left ${transitionSpeed}ms`);
 
-  container.querySelector('.previous').onclick = () => {
-    position = Math.min(position + (width * count), 0);
-    slider.style.marginLeft = `${position}px`;
-  };
+    let position = 0;
 
-  container.querySelector('.next').onclick = () => {
-    position = Math.max(position - (width * count), -width * (items.length - count));
-    slider.style.marginLeft = `${position}px`;
-  };
+    $(container).find('.previous').click(() => {
+      position = Math.min(position + (width * count), 0);
+      $(slider).css('margin-left', `${position}px`);
+    });
+
+    $(container).find('.next').click(() => {
+      position = Math.max(position - (width * count), -width * (items.length - count));
+      $(slider).css('margin-left', `${position}px`);
+    });
+  }
 }

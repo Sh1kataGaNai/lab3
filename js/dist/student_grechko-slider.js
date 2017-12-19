@@ -1,6 +1,10 @@
 'use strict';
 
-function Slider(options) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Slider = function Slider(options) {
+  _classCallCheck(this, Slider);
+
   var container = options.container,
       slider = options.slider;
 
@@ -11,18 +15,19 @@ function Slider(options) {
   var width = 150;
   var count = options.elementsPerPage || data.elementsPerPage;
   var transitionSpeed = options.transitionSpeed || data.transitionSpeed;
-  container.style.width = width * count + 'px';
-  slider.style.transition = 'margin-left ' + transitionSpeed + 'ms';
+
+  $(container).css('width', width * count + 'px');
+  $(slider).css('transition', 'margin-left ' + transitionSpeed + 'ms');
 
   var position = 0;
 
-  container.querySelector('.previous').onclick = function () {
+  $(container).find('.previous').click(function () {
     position = Math.min(position + width * count, 0);
-    slider.style.marginLeft = position + 'px';
-  };
+    $(slider).css('margin-left', position + 'px');
+  });
 
-  container.querySelector('.next').onclick = function () {
+  $(container).find('.next').click(function () {
     position = Math.max(position - width * count, -width * (items.length - count));
-    slider.style.marginLeft = position + 'px';
-  };
-}
+    $(slider).css('margin-left', position + 'px');
+  });
+};
