@@ -1,0 +1,8 @@
+mixin sliderMixin(image, alt)
+    li.sliderLi
+        img(src=image, alt=alt)
+
+mixin sliderContentMixin()
+    - for (var i = 1; i < Object.keys(gallery['data_gallery']).length + 1; i++){
+        +sliderMixin(gallery['data_gallery'][i.toString()]['image'], gallery['data_gallery'][i.toString()]['alt'])
+    - }

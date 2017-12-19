@@ -1,0 +1,73 @@
+.sliderSection {
+	padding: 10px;
+}
+
+.sliderContainer {
+	position: relative;
+	padding: 10px 50px;
+}
+
+.buttonSlider {
+	position: absolute;
+	top: 65px;
+	display: block;
+    background-color: #006363; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #006363;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #006363;
+}
+
+.button1:hover {
+    background-color: #006363;
+    color: white;
+}
+
+
+.previous {
+	left: 5px;
+}
+
+.next {
+	right: 5px;
+}
+
+.gallery {
+	overflow: hidden;
+	ul {
+		height: 150px;
+		width: 9999px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+	}
+
+}
+
+.sliderLi {
+	position: relative;
+	display: inline-block;
+	img {
+		width: 150px;
+		height: 150px;
+		display: block;
+	}
+}

@@ -87,7 +87,7 @@ html, body {
 }
 
 .navContainer {
-	height: 57px;
+	max-height: 57px;
 	border-radius: 5px;
 	background-image: linear-gradient(0deg,  #B3B3B3 1%, #FFFFFF 100%);
 	display: flex;
@@ -109,7 +109,7 @@ html, body {
 	align-items: center;
 }
 .socialNavIcon {
-	margin-right: 20px;
+	margin-right: 10px;
 	height: 37px;
 	line-height: 37px;
 	display: block;

@@ -1,0 +1,25 @@
+extends ../layout.jade
+include ../mixins/sliderMixins.jade
+
+block head
+    script(src="js/dist/student_grechko-slider.min.js")
+    -var selected = 'Слайдер'
+
+block content
+    article.sliderSection
+        header 
+            h2.sectionHeadline Слайдер
+        div(data-elements-per-page=5, data-transition-speed=1000)#sliderContainer.sliderContainer
+            button.buttonSlider.button1.previous &larr;
+            div.gallery
+                ul#galleryList
+                    +sliderContentMixin()
+            button.buttonSlider.button1.next &rarr;
+    script.
+        var slider = new Slider({
+            container: document.getElementById('sliderContainer'),
+            slider: document.getElementById('galleryList'),
+            elementsPerPage: 4,
+            transitionSpeed: 300,
+        });
+    

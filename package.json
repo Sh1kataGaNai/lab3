@@ -17,10 +17,13 @@
   },
   "homepage": "https://github.com/Sh1kataGaNai/lab3#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "es6-promise": "4.1.1",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "4.0.0",
+    "gulp-babel": "^7.0.0",
     "gulp-clean-css": "3.9.0",
     "gulp-concat": "2.6.1",
     "gulp-csscomb": "3.0.8",

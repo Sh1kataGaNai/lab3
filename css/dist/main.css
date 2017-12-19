@@ -262,7 +262,7 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
-	height: 57px;
+	max-height: 57px;
 	margin-top: 3px;
 	margin-bottom: 10px;
 	border-radius: 5px;
@@ -311,7 +311,7 @@ body {
 	line-height: 37px;
 	display: block;
 	height: 37px;
-	margin-right: 20px;
+	margin-right: 10px;
 }
 
 .navHome {
@@ -528,6 +528,80 @@ th {
 	padding: 10px;
 }
 
+.sliderSection {
+	padding: 10px;
+}
+
+.sliderContainer {
+	position: relative;
+	padding: 10px 50px;
+}
+
+.buttonSlider {
+	font-size: 16px;
+	position: absolute;
+	top: 65px;
+	display: block;
+	margin: 10px;
+	cursor: pointer;
+	-webkit-transition-duration: .4s; /* Safari */
+	transition-duration: .4s;
+	text-align: center;
+	text-decoration: none;
+	color: white; /* Green */
+	border: none;
+	background-color: #006363;
+}
+
+.button1 {
+	color: black;
+	border: 2px solid #006363;
+	background-color: white;
+}
+
+.button1 {
+	color: black;
+	border: 2px solid #006363;
+	background-color: white;
+}
+
+.button1:hover {
+	color: white;
+	background-color: #006363;
+}
+
+.previous {
+	left: 5px;
+}
+
+.next {
+	right: 5px;
+}
+
+.gallery {
+	overflow: hidden;
+}
+
+.gallery ul {
+	font-size: 0;
+	width: 9999px;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sliderLi {
+	position: relative;
+	display: inline-block;
+}
+
+.sliderLi img {
+	display: block;
+	width: 150px;
+	height: 150px;
+}
+
 @media screen and (max-width: 960px) {
 
 .content {
@@ -541,6 +615,7 @@ th {
 
 .navContainer {
 	flex-direction: column;
+	max-height: none;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
